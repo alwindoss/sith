@@ -10,7 +10,7 @@ BINARY_NAME=sith
 
 all: generate test build
 build: 
-	$(GOBUILD) -o ./$(BINARY_LOC)/$(BINARY_NAME) -v ./...
+	$(GOBUILD) -o ./$(BINARY_LOC)/$(BINARY_NAME) -v
 test: generate
 	$(GOTEST) -v ./...
 generate:
