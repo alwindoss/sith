@@ -31,11 +31,6 @@ jobs:
             dep ensure
         fi
 
-    - name: Setup Path
-      env: 
-        PATH: $GOPATH/bin:$PATH
-      run: echo $PATH && ls -ltr $GOPATH/bin
-
     - name: Test
       run: make test
 
