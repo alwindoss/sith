@@ -1,4 +1,6 @@
 # sith
 Github Developer Toolkit
 
-![Sith Logo](doc/images/sith)
+![Sith Logo](doc/images/sith.png)
+
+
