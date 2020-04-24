@@ -8,13 +8,15 @@ GOGET=$(GOCMD) get
 BINARY_LOC=bin
 BINARY_NAME=sith
 
-all: generate test build
-build: 
+all: get generate test build
+build: get
 	$(GOBUILD) -o ./$(BINARY_LOC)/$(BINARY_NAME) -v
-test: generate
+test: get generate
 	$(GOTEST) -v ./...
 generate:
 	$(GOGENERATE) ./...
+get:
+	$(GOGET) -u -v github.com/golang/mock/mockgen
 clean: 
 	$(GOCLEAN)
 	rm -f ./$(BINARY_LOC)/$(BINARY_NAME)
