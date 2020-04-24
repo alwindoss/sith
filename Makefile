@@ -8,10 +8,10 @@ GOGET=$(GOCMD) get
 BINARY_LOC=bin
 BINARY_NAME=sith
 
-all: get generate test build
-build: get
+all: test build
+build: 
 	$(GOBUILD) -o ./$(BINARY_LOC)/$(BINARY_NAME) -v
-test: get generate
+test: 
 	$(GOTEST) -v ./...
 generate:
 	$(GOGENERATE) ./...
