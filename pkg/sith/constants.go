@@ -5,5 +5,5 @@ const (
 	FetchBranchPrefix = "heads/%s"
 
 	// CreateBranchPrefix represents the prefix before the branch name when using CreateRef API
-	CreateBranchPrefix = "refs/head/%s"
+	CreateBranchPrefix = "refs/heads/%s"
 )
