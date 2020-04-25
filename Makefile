@@ -5,18 +5,19 @@ GOCLEAN=$(GOCMD) clean
 GOTEST=$(GOCMD) test
 GOGENERATE=$(GOCMD) generate
 GOGET=$(GOCMD) get
+GOINSTALL=$(GOCMD) install
 BINARY_LOC=bin
 BINARY_NAME=sith
 
-all: test build
+all: get generate test build
 build: 
 	$(GOBUILD) -o ./$(BINARY_LOC)/$(BINARY_NAME) -v
-test: 
+test: get generate
 	$(GOTEST) -v ./...
 generate:
 	$(GOGENERATE) ./...
 get:
-	$(GOGET) -u -v github.com/golang/mock/mockgen
+	$(GOINSTALL) -v github.com/golang/mock/mockgen
 clean: 
 	$(GOCLEAN)
 	rm -f ./$(BINARY_LOC)/$(BINARY_NAME)

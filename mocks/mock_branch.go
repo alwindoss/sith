@@ -11,30 +11,30 @@ import (
 	reflect "reflect"
 )
 
-// MockGitService is a mock of GitService interface.
+// MockGitService is a mock of GitService interface
 type MockGitService struct {
 	ctrl     *gomock.Controller
 	recorder *MockGitServiceMockRecorder
 }
 
-// MockGitServiceMockRecorder is the mock recorder for MockGitService.
+// MockGitServiceMockRecorder is the mock recorder for MockGitService
 type MockGitServiceMockRecorder struct {
 	mock *MockGitService
 }
 
-// NewMockGitService creates a new mock instance.
+// NewMockGitService creates a new mock instance
 func NewMockGitService(ctrl *gomock.Controller) *MockGitService {
 	mock := &MockGitService{ctrl: ctrl}
 	mock.recorder = &MockGitServiceMockRecorder{mock}
 	return mock
 }
 
-// EXPECT returns an object that allows the caller to indicate expected use.
+// EXPECT returns an object that allows the caller to indicate expected use
 func (m *MockGitService) EXPECT() *MockGitServiceMockRecorder {
 	return m.recorder
 }
 
-// CreateBlob mocks base method.
+// CreateBlob mocks base method
 func (m *MockGitService) CreateBlob(arg0 context.Context, arg1, arg2 string, arg3 *github.Blob) (*github.Blob, *github.Response, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateBlob", arg0, arg1, arg2, arg3)
@@ -44,13 +44,13 @@ func (m *MockGitService) CreateBlob(arg0 context.Context, arg1, arg2 string, arg
 	return ret0, ret1, ret2
 }
 
-// CreateBlob indicates an expected call of CreateBlob.
+// CreateBlob indicates an expected call of CreateBlob
 func (mr *MockGitServiceMockRecorder) CreateBlob(arg0, arg1, arg2, arg3 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateBlob", reflect.TypeOf((*MockGitService)(nil).CreateBlob), arg0, arg1, arg2, arg3)
 }
 
-// CreateCommit mocks base method.
+// CreateCommit mocks base method
 func (m *MockGitService) CreateCommit(arg0 context.Context, arg1, arg2 string, arg3 *github.Commit) (*github.Commit, *github.Response, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateCommit", arg0, arg1, arg2, arg3)
@@ -60,13 +60,13 @@ func (m *MockGitService) CreateCommit(arg0 context.Context, arg1, arg2 string, a
 	return ret0, ret1, ret2
 }
 
-// CreateCommit indicates an expected call of CreateCommit.
+// CreateCommit indicates an expected call of CreateCommit
 func (mr *MockGitServiceMockRecorder) CreateCommit(arg0, arg1, arg2, arg3 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateCommit", reflect.TypeOf((*MockGitService)(nil).CreateCommit), arg0, arg1, arg2, arg3)
 }
 
-// CreateRef mocks base method.
+// CreateRef mocks base method
 func (m *MockGitService) CreateRef(arg0 context.Context, arg1, arg2 string, arg3 *github.Reference) (*github.Reference, *github.Response, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateRef", arg0, arg1, arg2, arg3)
@@ -76,13 +76,13 @@ func (m *MockGitService) CreateRef(arg0 context.Context, arg1, arg2 string, arg3
 	return ret0, ret1, ret2
 }
 
-// CreateRef indicates an expected call of CreateRef.
+// CreateRef indicates an expected call of CreateRef
 func (mr *MockGitServiceMockRecorder) CreateRef(arg0, arg1, arg2, arg3 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateRef", reflect.TypeOf((*MockGitService)(nil).CreateRef), arg0, arg1, arg2, arg3)
 }
 
-// CreateTag mocks base method.
+// CreateTag mocks base method
 func (m *MockGitService) CreateTag(arg0 context.Context, arg1, arg2 string, arg3 *github.Tag) (*github.Tag, *github.Response, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateTag", arg0, arg1, arg2, arg3)
@@ -92,13 +92,13 @@ func (m *MockGitService) CreateTag(arg0 context.Context, arg1, arg2 string, arg3
 	return ret0, ret1, ret2
 }
 
-// CreateTag indicates an expected call of CreateTag.
+// CreateTag indicates an expected call of CreateTag
 func (mr *MockGitServiceMockRecorder) CreateTag(arg0, arg1, arg2, arg3 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateTag", reflect.TypeOf((*MockGitService)(nil).CreateTag), arg0, arg1, arg2, arg3)
 }
 
-// CreateTree mocks base method.
+// CreateTree mocks base method
 func (m *MockGitService) CreateTree(arg0 context.Context, arg1, arg2, arg3 string, arg4 []github.TreeEntry) (*github.Tree, *github.Response, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "CreateTree", arg0, arg1, arg2, arg3, arg4)
@@ -108,13 +108,13 @@ func (m *MockGitService) CreateTree(arg0 context.Context, arg1, arg2, arg3 strin
 	return ret0, ret1, ret2
 }
 
-// CreateTree indicates an expected call of CreateTree.
+// CreateTree indicates an expected call of CreateTree
 func (mr *MockGitServiceMockRecorder) CreateTree(arg0, arg1, arg2, arg3, arg4 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CreateTree", reflect.TypeOf((*MockGitService)(nil).CreateTree), arg0, arg1, arg2, arg3, arg4)
 }
 
-// DeleteRef mocks base method.
+// DeleteRef mocks base method
 func (m *MockGitService) DeleteRef(arg0 context.Context, arg1, arg2, arg3 string) (*github.Response, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "DeleteRef", arg0, arg1, arg2, arg3)
@@ -123,13 +123,13 @@ func (m *MockGitService) DeleteRef(arg0 context.Context, arg1, arg2, arg3 string
 	return ret0, ret1
 }
 
-// DeleteRef indicates an expected call of DeleteRef.
+// DeleteRef indicates an expected call of DeleteRef
 func (mr *MockGitServiceMockRecorder) DeleteRef(arg0, arg1, arg2, arg3 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "DeleteRef", reflect.TypeOf((*MockGitService)(nil).DeleteRef), arg0, arg1, arg2, arg3)
 }
 
-// GetBlob mocks base method.
+// GetBlob mocks base method
 func (m *MockGitService) GetBlob(arg0 context.Context, arg1, arg2, arg3 string) (*github.Blob, *github.Response, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetBlob", arg0, arg1, arg2, arg3)
@@ -139,13 +139,13 @@ func (m *MockGitService) GetBlob(arg0 context.Context, arg1, arg2, arg3 string) 
 	return ret0, ret1, ret2
 }
 
-// GetBlob indicates an expected call of GetBlob.
+// GetBlob indicates an expected call of GetBlob
 func (mr *MockGitServiceMockRecorder) GetBlob(arg0, arg1, arg2, arg3 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetBlob", reflect.TypeOf((*MockGitService)(nil).GetBlob), arg0, arg1, arg2, arg3)
 }
 
-// GetBlobRaw mocks base method.
+// GetBlobRaw mocks base method
 func (m *MockGitService) GetBlobRaw(arg0 context.Context, arg1, arg2, arg3 string) ([]byte, *github.Response, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetBlobRaw", arg0, arg1, arg2, arg3)
@@ -155,13 +155,13 @@ func (m *MockGitService) GetBlobRaw(arg0 context.Context, arg1, arg2, arg3 strin
 	return ret0, ret1, ret2
 }
 
-// GetBlobRaw indicates an expected call of GetBlobRaw.
+// GetBlobRaw indicates an expected call of GetBlobRaw
 func (mr *MockGitServiceMockRecorder) GetBlobRaw(arg0, arg1, arg2, arg3 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetBlobRaw", reflect.TypeOf((*MockGitService)(nil).GetBlobRaw), arg0, arg1, arg2, arg3)
 }
 
-// GetCommit mocks base method.
+// GetCommit mocks base method
 func (m *MockGitService) GetCommit(arg0 context.Context, arg1, arg2, arg3 string) (*github.Commit, *github.Response, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetCommit", arg0, arg1, arg2, arg3)
@@ -171,13 +171,13 @@ func (m *MockGitService) GetCommit(arg0 context.Context, arg1, arg2, arg3 string
 	return ret0, ret1, ret2
 }
 
-// GetCommit indicates an expected call of GetCommit.
+// GetCommit indicates an expected call of GetCommit
 func (mr *MockGitServiceMockRecorder) GetCommit(arg0, arg1, arg2, arg3 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetCommit", reflect.TypeOf((*MockGitService)(nil).GetCommit), arg0, arg1, arg2, arg3)
 }
 
-// GetRef mocks base method.
+// GetRef mocks base method
 func (m *MockGitService) GetRef(arg0 context.Context, arg1, arg2, arg3 string) (*github.Reference, *github.Response, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetRef", arg0, arg1, arg2, arg3)
@@ -187,13 +187,13 @@ func (m *MockGitService) GetRef(arg0 context.Context, arg1, arg2, arg3 string) (
 	return ret0, ret1, ret2
 }
 
-// GetRef indicates an expected call of GetRef.
+// GetRef indicates an expected call of GetRef
 func (mr *MockGitServiceMockRecorder) GetRef(arg0, arg1, arg2, arg3 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRef", reflect.TypeOf((*MockGitService)(nil).GetRef), arg0, arg1, arg2, arg3)
 }
 
-// GetRefs mocks base method.
+// GetRefs mocks base method
 func (m *MockGitService) GetRefs(arg0 context.Context, arg1, arg2, arg3 string) ([]*github.Reference, *github.Response, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetRefs", arg0, arg1, arg2, arg3)
@@ -203,13 +203,13 @@ func (m *MockGitService) GetRefs(arg0 context.Context, arg1, arg2, arg3 string) 
 	return ret0, ret1, ret2
 }
 
-// GetRefs indicates an expected call of GetRefs.
+// GetRefs indicates an expected call of GetRefs
 func (mr *MockGitServiceMockRecorder) GetRefs(arg0, arg1, arg2, arg3 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetRefs", reflect.TypeOf((*MockGitService)(nil).GetRefs), arg0, arg1, arg2, arg3)
 }
 
-// GetTag mocks base method.
+// GetTag mocks base method
 func (m *MockGitService) GetTag(arg0 context.Context, arg1, arg2, arg3 string) (*github.Tag, *github.Response, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetTag", arg0, arg1, arg2, arg3)
@@ -219,13 +219,13 @@ func (m *MockGitService) GetTag(arg0 context.Context, arg1, arg2, arg3 string) (
 	return ret0, ret1, ret2
 }
 
-// GetTag indicates an expected call of GetTag.
+// GetTag indicates an expected call of GetTag
 func (mr *MockGitServiceMockRecorder) GetTag(arg0, arg1, arg2, arg3 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetTag", reflect.TypeOf((*MockGitService)(nil).GetTag), arg0, arg1, arg2, arg3)
 }
 
-// GetTree mocks base method.
+// GetTree mocks base method
 func (m *MockGitService) GetTree(arg0 context.Context, arg1, arg2, arg3 string, arg4 bool) (*github.Tree, *github.Response, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetTree", arg0, arg1, arg2, arg3, arg4)
@@ -235,13 +235,13 @@ func (m *MockGitService) GetTree(arg0 context.Context, arg1, arg2, arg3 string, 
 	return ret0, ret1, ret2
 }
 
-// GetTree indicates an expected call of GetTree.
+// GetTree indicates an expected call of GetTree
 func (mr *MockGitServiceMockRecorder) GetTree(arg0, arg1, arg2, arg3, arg4 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetTree", reflect.TypeOf((*MockGitService)(nil).GetTree), arg0, arg1, arg2, arg3, arg4)
 }
 
-// ListRefs mocks base method.
+// ListRefs mocks base method
 func (m *MockGitService) ListRefs(arg0 context.Context, arg1, arg2 string, arg3 *github.ReferenceListOptions) ([]*github.Reference, *github.Response, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "ListRefs", arg0, arg1, arg2, arg3)
@@ -251,13 +251,13 @@ func (m *MockGitService) ListRefs(arg0 context.Context, arg1, arg2 string, arg3 
 	return ret0, ret1, ret2
 }
 
-// ListRefs indicates an expected call of ListRefs.
+// ListRefs indicates an expected call of ListRefs
 func (mr *MockGitServiceMockRecorder) ListRefs(arg0, arg1, arg2, arg3 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "ListRefs", reflect.TypeOf((*MockGitService)(nil).ListRefs), arg0, arg1, arg2, arg3)
 }
 
-// UpdateRef mocks base method.
+// UpdateRef mocks base method
 func (m *MockGitService) UpdateRef(arg0 context.Context, arg1, arg2 string, arg3 *github.Reference, arg4 bool) (*github.Reference, *github.Response, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "UpdateRef", arg0, arg1, arg2, arg3, arg4)
@@ -267,7 +267,7 @@ func (m *MockGitService) UpdateRef(arg0 context.Context, arg1, arg2 string, arg3
 	return ret0, ret1, ret2
 }
 
-// UpdateRef indicates an expected call of UpdateRef.
+// UpdateRef indicates an expected call of UpdateRef
 func (mr *MockGitServiceMockRecorder) UpdateRef(arg0, arg1, arg2, arg3, arg4 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "UpdateRef", reflect.TypeOf((*MockGitService)(nil).UpdateRef), arg0, arg1, arg2, arg3, arg4)
