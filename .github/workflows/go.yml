@@ -40,4 +40,9 @@ jobs:
         make test
 
     - name: Build
-      run: make
+      run: |
+        export GOPATH=$HOME/go
+        export GOBIN=$(go env GOPATH)/bin
+        export PATH=$PATH:$GOPATH
+        export PATH=$PATH:$GOBIN
+        make
